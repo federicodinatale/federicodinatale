@@ -1,0 +1,327 @@
+
+:root {
+    --black: #222831;
+    --grey: #393E46;
+    --tail: #00ADB5;
+    --white: #EEEEEE;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+body {
+    font-family: 'Ubuntu Mono', monospace;
+    margin: 10px;
+}
+
+p {
+    font-weight: 1.2rem;
+}
+
+
+.color-text {
+    color: var(--black);
+}
+
+nav,
+nav:after,
+nav:before {
+transition: all .5s;
+background: rgb(0,173,181);
+    background: linear-gradient(250deg, rgba(0,173,181,0.5508797268907564) 2%, rgba(238,238,238,0.027070203081232536) 26%);
+}
+
+.navbar-style {
+    transition: all 2s;
+    position: relative;
+    font-size: 1.3rem;
+}
+
+.navbar-style:after {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+width: 0%;
+content: '.';
+color: transparent;
+background: #aaa;
+height: 1px;
+}
+
+.navbar-style:hover {
+color: #fff;
+z-index: 1;
+}
+.navbar-style:hover:after {
+z-index: -10;
+animation: fill 1s forwards;
+opacity: 1;
+}
+
+/* Keyframes */
+@keyframes fill {
+0% {
+    width: 0%;
+    height: 1px;
+}
+50% {
+    width: 100%;
+    height: 1px;
+}
+100% {
+    width: 100%;
+    height: 100%;
+    background: #333;
+}
+}
+  
+
+.container-box {
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 1px 2px 10px 1px var(--grey);
+    margin: 20px 0 20px;
+}
+
+.container-box:hover {
+    box-shadow: 7px 9px 9px -8px var(--grey);
+}
+
+
+
+/* heading */
+/* h1 */
+
+
+.container-header {
+    height: 80vh;
+    margin: 20px 0 10px;
+    background: rgb(0,173,181);
+    background: linear-gradient(22deg, rgba(0,173,181,0.5508797268907564) 2%, rgba(238,238,238,0.027070203081232536) 26%);
+    border-radius: 2%;
+    box-shadow: 7px 9px 9px -8px var(--grey);
+
+}
+
+.title {
+    font-size: 3.5rem;
+}
+
+.markdown-style-tag {
+    color: grey;
+    font-weight: bold;
+    letter-spacing: normal;
+}
+
+.markdown-style-slash {
+    color: #393E46;
+    font-weight: bold;
+}
+
+.markdown-style-element {
+    color: var(--tail);
+    font-weight: bold;
+}
+
+
+
+@media screen and (min-width: 991px) {
+
+    .typewriter h1, h1::after  {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        /* border-right: .15em solid var(--tail);  */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: 0.06rem; /* Adjust as needed */
+
+        animation: 
+          typing 2.0s steps(40, end),
+          blink-caret 0.75s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: var(--tail)}
+      }
+
+
+      .img-style {
+        border-radius: 100%;
+        position: absolute;
+        right: 100px;
+        bottom: 0px;
+        width: 300px;
+        height: 300px;
+        -webkit-box-shadow: 0px 0px 7px 3px rgba(92,92,92,0.41); 
+box-shadow: 0px 0px 7px 3px rgba(92,92,92,0.41);
+        
+    }
+
+    .img-cv {
+        position: absolute;
+        right: 100px;
+        bottom: 0px;
+        width: 300px;
+        height: 400px;
+
+        rotate: -10deg;
+        -webkit-box-shadow: 0px 0px 7px 3px rgba(92,92,92,0.41); 
+box-shadow: 0px 0px 7px 3px rgba(92,92,92,0.41);
+    }
+
+    .img-coffe {
+        position: absolute;
+        right: 100px;
+        bottom: 0px;
+        width: 300px;
+        height: 300px;
+
+    }
+
+    .img-coding {
+        position: absolute;
+        right: 100px;
+        bottom: 0px;
+        width: 300px;
+        height: 200px;
+
+    }
+
+
+    .paragraph {
+        font-size: 1.8rem;
+        text-align: left;
+
+
+    }
+
+  }
+
+
+
+@media screen and (max-width: 991px){
+    .title {
+        font-size: 2rem;
+    }
+
+    .container-header {
+        height: 50vh;
+    }
+
+    .img-style {
+        border-radius: 100%;
+        position: absolute;
+        right: 100px;
+        width: 200px;
+        height: 200px;
+        -webkit-box-shadow: 0px 0px 7px 3px rgba(92,92,92,0.41); 
+box-shadow: 0px 0px 7px 3px rgba(92,92,92,0.41);
+    }
+
+    .img-cv {
+        position: absolute;
+        right: 100px;
+        width: 200px;
+        height: 300px;
+
+        rotate: -7deg;
+        -webkit-box-shadow: 0px 0px 7px 3px rgba(92,92,92,0.41); 
+box-shadow: 0px 0px 7px 3px rgba(92,92,92,0.41);
+    }
+
+    .img-coffe {
+        position: absolute;
+        right: 100px;
+        width: 200px;
+        height: 200px;
+
+    }
+
+    .img-coding {
+        position: absolute;
+        right: 100px;
+        bottom: 280px;
+        width: 200px;
+        height: 150px;
+
+    }
+
+
+    .paragraph {
+        font-size: 1.3rem;
+        text-align: left;
+    }
+}
+
+
+@media screen and (max-width: 775px){
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .container-header {
+        height: 25vh;
+    }
+
+    .img-style {
+        border-radius: 100%;
+        position: absolute;
+        right: 100px;
+        width: 150px;
+        height: 150px;
+        -webkit-box-shadow: 0px 0px 7px 3px rgba(92,92,92,0.41); 
+box-shadow: 0px 0px 7px 3px rgba(92,92,92,0.41);
+    }
+
+    .img-cv {
+        /* position: absolute;
+        right: 100px;
+        width: 200px;
+        height: 300px;
+
+        bottom: 100px;
+
+        rotate: 0deg;
+        -webkit-box-shadow: 0px 0px 7px 3px rgba(92,92,92,0.41); 
+box-shadow: 0px 0px 7px 3px rgba(92,92,92,0.41); */
+        display: none;
+    }
+
+    .img-coffe {
+        position: absolute;
+        right: 100px;
+        width: 150px;
+        height: 150px;
+        bottom: 470px;
+    }
+
+    .img-coding {
+        position: absolute;
+        right: 20px;
+        bottom: 500px;
+        width: 100px;
+        height: 70px;
+    }
+
+
+    .paragraph {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+/* CV PAGE */
+
+
